@@ -1,0 +1,28 @@
+##Spider Instructions for scraping a site based on the URLs
+
+1. Go to Google Maps and get the Lat/Long of any city:
+
+
+2. Run the Javascript program, main_scrape.js in the console, using the newly gathered lat/long in the get_data function. You must have the webpage open for this to work.
+
+### REMEMBER TO UPDATE THE BASE URL ###
+Copy/paste the file into the console, then:
+
+2a) get_data(lat/long determined by google api)
+
+2b) save_file(city_name)
+
+3. Now use the python app scrape.py
+> python 
+>>> import scrape.py
+>>> get_pages('nameofdump.json', start_position)
+
+The start position is because some sites rate throttle you, so this allows us to resume wherever it got capped (once you've overcome the rate limit manually?)
+
+4. Parse the items from the HTML
+> python
+>>> import scrape.py
+>>> process_page('nameofdump.json', 'city_name')
+
+
+
